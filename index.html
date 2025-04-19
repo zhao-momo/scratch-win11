@@ -1,14 +1,100 @@
-<html>
-  <head>
-  <style>
-  body{
-  background-color:grey;
-  }
-  </style>
-  </head>
-  <body>
-  <h1>scratch-win11体验网址</h1>
-  <a href="https://scw11.pages.dev/windows 11.sb3">download</a>
-  <a href="https://scw11.pages.dev/windows 11.html">use</a>
-  
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scratch-Windows11 项目中心</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        .header {
+            text-align: center;
+            padding: 40px;
+            background: #0078d4;
+            color: white;
+            border-radius: 10px;
+        }
+        .download-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .download-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .preview-section {
+            margin: 30px 0;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #0078d4;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Scratch-Windows11 模拟器</h1>
+        <p>体验基于Scratch开发的Windows 11界面交互系统</p>
+    </div>
+
+    <!-- 下载区域 -->
+    <div class="download-section">
+        <div class="download-card">
+            <h2>下载安装包</h2>
+            <p>支持Windows系统的离线运行版本</p>
+            <button class="button" onclick="downloadFile('scratch-win11.exe', 'https://example.com/files/scratch-win11.exe')">
+                下载EXE文件
+            </button>
+            <p>版本：3.29.1 | 大小：18.2MB</p>
+        </div>
+
+        <div class="download-card">
+            <h2>获取SB3项目</h2>
+            <p>用于学习和二次开发的原始代码文件</p>
+            <button class="button" onclick="downloadFile('win11-simulator.sb3', 'https://example.com/files/win11-simulator.sb3')">
+                下载SB3文件
+            </button>
+            <p>包含任务栏、开始菜单等交互模块</p>
+        </div>
+    </div>
+
+    <!-- 在线预览区域 -->
+    <div class="preview-section">
+        <h2>在线体验</h2>
+        <iframe src="https://scw11.pages.dev/windows 11.html"></iframe>
+    </div>
+
+    <script>
+        // 文件下载函数（兼容Chrome/Firefox）
+        function downloadFile(filename, url) {
+            const link = document.createElement('a');
+            link.style.display = 'none';
+            link.href = url;
+            link.download = filename;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
 </html>
